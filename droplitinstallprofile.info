@@ -1,0 +1,6 @@
+name = "droplitinstallprofile"
+core = "6.x"
+...
+project = "droplitinstallprofile"
+project status url = "http://features.droplits.net/fserver"
+version = "6.x-1.0"
