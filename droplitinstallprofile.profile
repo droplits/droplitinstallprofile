@@ -4,7 +4,7 @@
 /**
  * Implementation of hook_profile_details().
  */
-function droplitprofile_profile_details() {
+function droplitinstallprofile_profile_details() {
   return array(
     'name' => 'Droplit',
     'description' => 'Standard starter site for Droplits'
@@ -14,7 +14,7 @@ function droplitprofile_profile_details() {
 /**
  * Implementation of hook_profile_modules().
  */
-function droplitprofile_profile_modules() {
+function droplitinstallprofile_profile_modules() {
   $modules = array(
      // Drupal core
     'block',
@@ -57,10 +57,6 @@ function droplitprofile_profile_modules() {
     // 'openidadmin',
     // PURL
     'purl',
-    // Seed
-    // 'seed',
-    // Spaces
-    // 'spaces', 'spaces_site', 'spaces_user', 'spaces_og',
   );
 
   // If language is not English we add the 'atrium_translate' module the first
@@ -79,7 +75,8 @@ function droplitprofile_profile_modules() {
 /**
  * Returns an array list of droplit features (and supporting) modules.
  */
-function _droplitprofile_droplit_modules() {
+
+function _droplitinstallprofile_core_modules() {
   return array(
     // Strongarm
     // 'strongarm',
@@ -113,7 +110,7 @@ function _droplitprofile_droplit_modules() {
 /**
  * Implementation of hook_profile_task_list().
   */
-function droplitprofile_profile_task_list() {
+function droplitinstallprofile_profile_task_list() {
   $tasks['droplit-modules-batch'] = st('Install Droplit modules');
   $tasks['droplit-configure-batch'] = st('Configure Droplit');
   return $tasks;
@@ -122,7 +119,7 @@ function droplitprofile_profile_task_list() {
 /**
  * Implementation of hook_profile_tasks().
  */
-function droplitprofile_profile_tasks(&$task, $url) {
+function droplitinstallprofile_profile_tasks(&$task, $url) {
   global $profile, $install_locale;
 
   // Just in case some of the future tasks adds some output
@@ -142,13 +139,13 @@ function droplitprofile_profile_tasks(&$task, $url) {
 
   // Install some more modules and maybe localization helpers too
   if ($task == 'droplit-modules') {
-    $modules = _droplitprofile_droplit_modules();
+    $modules = _droplitinstallprofile_core_modules();
     $files = module_rebuild_cache();
     // Create batch
     foreach ($modules as $module) {
       $batch['operations'][] = array('_install_module_batch', array($module, $files[$module]->info['name']));
     }
-    $batch['finished'] = '_droplitprofile_profile_batch_finished';
+    $batch['finished'] = '_droplitinstallprofile_profile_batch_finished';
     $batch['title'] = st('Installing @drupal', array('@drupal' => drupal_install_profile_name()));
     $batch['error_message'] = st('The installation has encountered an error.');
 
@@ -166,9 +163,9 @@ function droplitprofile_profile_tasks(&$task, $url) {
   // @todo Review for localization, the time zone cannot be set that way either
   if ($task == 'droplit-configure') {
     $batch['title'] = st('Configuring @drupal', array('@drupal' => drupal_install_profile_name()));
-    $batch['operations'][] = array('_droplitprofile_droplit_configure', array());
-    $batch['operations'][] = array('_droplitprofile_droplit_configure_check', array());
-    $batch['finished'] = '_droplitprofile_droplit_configure_finished';
+    $batch['operations'][] = array('_droplitinstallprofile_droplit_configure', array());
+    $batch['operations'][] = array('_droplitinstallprofile_droplit_configure_check', array());
+    $batch['finished'] = '_droplitinstallprofile_droplit_configure_finished';
     variable_set('install_task', 'droplit-configure-batch');
     batch_set($batch);
     batch_process($url, $url);
@@ -190,7 +187,7 @@ function droplitprofile_profile_tasks(&$task, $url) {
 /**
  * Configuration. First stage.
  */
-function _droplitprofile_droplit_configure() {
+function _droplitinstallprofile_droplit_configure() {
   global $install_locale;
 
   // Disable the english locale if using a different default locale.
@@ -251,7 +248,7 @@ function _droplitprofile_droplit_configure() {
 /**
  * Configuration. Second stage.
  */
-function _droplitprofile_droplit_configure_check() {
+function _droplitinstallprofile_droplit_configure_check() {
   // Rebuild key tables/caches
   module_rebuild_cache(); // Detects the newly added bootstrap modules
   node_access_rebuild();
@@ -270,7 +267,7 @@ function _droplitprofile_droplit_configure_check() {
  *
  * @todo Handle error condition
  */
-function _droplitprofile_droplit_configure_finished($success, $results) {
+function _droplitinstallprofile_droplit_configure_finished($success, $results) {
   variable_set('droplit_install', 1);
   // Get out of this batch and let the installer continue. If loaded translation,
   // we skip the locale remaining batch and move on to the next.
@@ -289,7 +286,7 @@ function _droplitprofile_droplit_configure_finished($success, $results) {
  *
  * Advance installer task to language import.
  */
-function _droplitprofile_profile_batch_finished($success, $results) {
+function _droplitinstallprofile_profile_batch_finished($success, $results) {
   variable_set('install_task', 'droplit-configure');
 }
 
@@ -315,7 +312,7 @@ function _droplitprofile_profile_batch_finished($success, $results) {
 // Set Droplit as default profile
 function system_form_install_select_profile_form_alter(&$form, $form_state) {
   foreach($form['profile'] as $key => $element) {
-    $form['profile'][$key]['#value'] = 'droplitprofile';
+    $form['profile'][$key]['#value'] = 'droplitinstallprofile';
   }
 }
 
