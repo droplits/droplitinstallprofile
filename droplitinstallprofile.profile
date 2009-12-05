@@ -57,6 +57,7 @@ function droplitinstallprofile_profile_modules() {
     // 'openidadmin',
     // PURL
     'purl',
+    'site_variables',
   );
 
   // If language is not English we add the 'atrium_translate' module the first
