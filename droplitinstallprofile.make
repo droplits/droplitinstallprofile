@@ -1,4 +1,4 @@
-; $Id: droplitprofile.make,v 1.1.2.5 2009/11/29 00:14:46 droplits Exp $
+; $Id: droplitinstallprofile.make,v 1.1.2.5 2009/11/29 00:14:46 droplits Exp $
 
 core = 6.x
 
@@ -31,6 +31,8 @@ projects[print][subdir] = "contrib"
 projects[purl][subdir] = "contrib"
 projects[spaces][subdir] = "contrib"
 projects[spamspan][subdir] = "contrib"
+projects[strongarm][subdir] = "contrib"
+projects[strongarm][version] = 2.0-beta1
 projects[token][subdir] = "contrib"
 projects[transliteration][subdir] = "contrib"
 projects[typogrify][subdir] = "contrib"
@@ -40,17 +42,14 @@ projects[xmlsitemap][subdir] = "contrib"
 
 ; Patched.
 ; Explicit versions specified to ensure patches apply cleanly.
-; projects[context][subdir] = "contrib"
-; projects[context][version] = "2.0-beta7"
-; projects[context][patch][] = "http://drupal.org/files/issues/606816-1_node_fo$
 
 ; Custom modules
 ; projects[seed][subdir] = "custom"
 ; projects[seed][location] = "http://code.developmentseed.org/fserver"
 
 ; Features
-; projects[mn_about][subdir] = "features"
-; projects[mn_about][location] = "http://code.developmentseed.org/fserver"
+projects[site_variables][subdir] = "features"
+projects[site_variables][location] = "http://features.droplits.net/fserver"
 
 ; Themes
 projects[tao][location] = "http://code.developmentseed.org/fserver"
@@ -58,6 +57,4 @@ projects[rubik][location] = "http://code.developmentseed.org/fserver"
 projects[singular][location] = "http://code.developmentseed.org/fserver"
 
 ; Libraries
-; libraries[simplepie][download][type] = "get"
-; libraries[simplepie][download][url] = "http://simplepie.org/downloads/simplep$
-; libraries[simplepie][directory_name] = "simplepie"
+

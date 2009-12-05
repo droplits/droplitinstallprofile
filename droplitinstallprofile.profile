@@ -18,18 +18,18 @@ function droplitinstallprofile_profile_modules() {
   $modules = array(
      // Drupal core
     'block',
+    'color',
     'comment',
     'dblog',
     'filter',
     'help',
     'menu',
     'node',
-    'openid',
     'path',
     'search',
     'system',
     'taxonomy',
-    'upload',
+    'update',
     'user',
     // Admin
     'admin',
@@ -79,7 +79,7 @@ function droplitinstallprofile_profile_modules() {
 function _droplitinstallprofile_core_modules() {
   return array(
     // Strongarm
-    // 'strongarm',
+    'strongarm',
     // Core features
     // 'book',
     // Calendar, date
