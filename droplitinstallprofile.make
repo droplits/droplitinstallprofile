@@ -4,7 +4,6 @@ core = 6.x
 
 ; Contrib projects
 projects[addanother][subdir] = "contrib"
-projects[admin] = 2.0-alpha1
 projects[admin][subdir] = "contrib"
 projects[admin] = 2.0-alpha1
 projects[admin_menu][subdir] = "contrib"
