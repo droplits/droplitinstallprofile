@@ -19,7 +19,7 @@ function droplitinstallprofile_profile_modules() {
      // Drupal core
     'block',
     'color',
-    'comment',
+    // 'comment',
     'dblog',
     'filter',
     'help',
