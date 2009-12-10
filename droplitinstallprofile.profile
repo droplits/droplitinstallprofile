@@ -96,6 +96,7 @@ function _droplitinstallprofile_core_modules() {
     // Content profile
     // 'content_profile',
     // Formats
+    'wysiwyg', 'ckeditor', 'htmlpurifier'
     // 'codefilter', 'markdown',
     'typogrify', 'spamspan',
     // Others
