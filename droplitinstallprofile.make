@@ -12,7 +12,6 @@ projects[backup_migrate][subdir] = "contrib"
 projects[better_formats][subdir] = "contrib"
 projects[cck][subdir] = "contrib"
 projects[ckeditor][subdir] = "contrib"
-projects[ckeditor] = 1.x-dev
 projects[context][subdir] = "contrib"
 projects[ctools][subdir] = "contrib"
 projects[custom_breadcrumbs][subdir] = "contrib"
