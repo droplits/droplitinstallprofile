@@ -118,6 +118,7 @@ function droplitinstallprofile_profile_task_list() {
  */
 function droplitinstallprofile_profile_tasks(&$task, $url) {
   _droplitinstallprofile_modify_settings();
+  _droplitinstallprofile_modify_blocks();
 } // function droplitinstallprofile_profile_tasks
 
 /**
@@ -139,3 +140,23 @@ function _droplitinstallprofile_modify_settings() {
   variable_set('theme_settings', $theme_settings);
   $theme_key = 'singular';
 } // function _droplitinstallprofile_modify_settings
+
+/**
+ * Modify the block settings.
+ */
+function _droplitinstallprofile_modify_blocks() {
+  _block_rehash();  // Fill the DB with default block info for Singular.
+
+  // Hide "Powered by Drupal".
+  db_query("DELETE FROM {blocks} WHERE module = '%s' AND theme = '%s' " .
+           "AND region = '%s'", 'system', 'singular', 'content');
+
+  // Hide "Navigation".
+  db_query("DELETE FROM {blocks} WHERE module = '%s' AND theme = '%s' " .
+           "AND region = '%s'", 'user', 'singular', 'content');  
+  
+  // Hide "User login".
+  db_query("UPDATE {blocks} SET status = %d, region = '%s' " .
+           "WHERE theme = '%s' AND bid = %d AND module = '%s'",
+           0, NULL, 'singular', 5, 'user');
+} // function _droplitinstallprofile_modify_blocks
