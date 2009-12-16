@@ -117,4 +117,25 @@ function droplitinstallprofile_profile_task_list() {
  * Implementation of hook_profile_tasks().
  */
 function droplitinstallprofile_profile_tasks(&$task, $url) {
-}
+  _droplitinstallprofile_modify_settings();
+} // function droplitinstallprofile_profile_tasks
+
+/**
+ * Modify the default settings of Drupal and contributed modules.
+ */
+function _droplitinstallprofile_modify_settings() {
+  global $theme_key;
+
+  // Basic Drupal settings.
+  // variable_set('site_frontpage', 'home');
+  // variable_set('user_register', 0);
+
+  // Theme related.
+  system_initialize_theme_blocks('singular');
+  variable_set('theme_default', 'singular');
+  // variable_set('admin_theme', 'toasted');
+  $theme_settings = variable_get('theme_settings', array());
+  $theme_settings['toggle_node_info_page'] = FALSE;
+  variable_set('theme_settings', $theme_settings);
+  $theme_key = 'singular';
+} // function _droplitinstallprofile_modify_settings
