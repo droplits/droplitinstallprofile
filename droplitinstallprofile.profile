@@ -91,10 +91,10 @@ function droplitinstallprofile_profile_modules() {
     // 'wysiwyg', 'ckeditor', 'htmlpurifier'
 
     // 'codefilter', 'markdown',
-    'typogrify', 'spamspan',
+    // 'typogrify', 'spamspan',
 
     // Others
-    'devel', 'jquery_update', 'menu_attributes', 'pathauto', 'poormanscron', 'print', 'print_mail', 'vertical_tabs',
+    'devel', 'diff', 'jquery_update', 'menu_attributes', 'pathauto', 'poormanscron', 'print', 'print_mail', 'vertical_tabs',
 
     // Spaces design customizer
     // 'color', 'spaces_design',
@@ -198,13 +198,6 @@ function _droplitinstallprofile_modify_blocks() {
            "WHERE theme = '%s' AND bid = %d AND module = '%s'",
            0, NULL, 'singular', 5, 'user');
 } // function _droplitinstallprofile_modify_blocks
-
-
-
-
-
-
-
 
 /**
  * Finished callback for the modules install batch.
