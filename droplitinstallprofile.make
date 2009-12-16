@@ -5,7 +5,7 @@ core = 6.x
 ; Contrib projects
 projects[addanother][subdir] = "contrib"
 projects[admin][subdir] = "contrib"
-projects[admin] = 2.0-alpha1
+projects[admin] = 2.0-alpha2
 projects[admin_menu][subdir] = "contrib"
 projects[advanced_help][subdir] = "contrib"
 projects[backup_migrate][subdir] = "contrib"
@@ -16,6 +16,7 @@ projects[context][subdir] = "contrib"
 projects[ctools][subdir] = "contrib"
 projects[custom_breadcrumbs][subdir] = "contrib"
 projects[devel][subdir] = "contrib"
+projects[diff][subdir] = "contrib"
 projects[features][subdir] = "contrib"
 projects[globalredirect][subdir] = "contrib"
 projects[google_analytics][subdir] = "contrib"
