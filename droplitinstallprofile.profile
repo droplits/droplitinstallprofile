@@ -151,9 +151,9 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     // blowing away our changes.
     _droplitinstallprofile_system_theme_data();
     db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
-    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'singular'");
-    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'singular'");
-    variable_set('theme_default', 'singular');
+    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'cube'");
+    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'cube'");
+    variable_set('theme_default', 'cube');
 
     $task = 'finished';
   }  
