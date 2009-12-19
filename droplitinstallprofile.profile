@@ -61,7 +61,7 @@ function droplitinstallprofile_profile_modules() {
 
     // PURL
     'purl',
-    'site_variables',
+    // 'site_variables',
 
     // Strongarm
     'strongarm',
