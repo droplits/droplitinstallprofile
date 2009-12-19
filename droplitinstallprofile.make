@@ -16,7 +16,6 @@ projects[data][subdir] = "contrib"
 projects[designkit][subdir] = "contrib"
 projects[devel][subdir] = "contrib"
 projects[diff][subdir] = "contrib"
-
 projects[feeds][subdir] = "contrib"
 projects[globalredirect][subdir] = "contrib"
 projects[google_analytics][subdir] = "contrib"
@@ -42,43 +41,35 @@ projects[views][subdir] = "contrib"
 projects[wysiwyg][subdir] ="contrib"
 projects[xmlsitemap][subdir] = "contrib"
 
-projects[features][subdir] = "contrib"
 projects[features][type] = "module"
 projects[features][download][type] = "cvs"
 projects[features][download][module] = "contributions/modules/features"
 projects[features][download][revision] = "DRUPAL-6--1"
 
-projects[admin][subdir] = "contrib"
 projects[admin][type] = "module"
 projects[admin][download][type] = "cvs"
 projects[admin][download][module] = "contributions/modules/admin"
 projects[admin][download][revision] = "DRUPAL-6--2"
 
-projects[strongarm][subdir] = "contrib"
 projects[strongarm][type] = "module"
 projects[strongarm][download][type] = "cvs"
 projects[strongarm][download][module] = "contributions/modules/strongarm"
 projects[strongarm][download][revision] = "DRUPAL-6--2"
 
-projects[purl][subdir] = "contrib"
 projects[purl][type] = "module"
 projects[purl][download][type] = "cvs"
 projects[purl][download][module] = "contributions/modules/purl"
 projects[purl][download][revision] = "DRUPAL-6--1"
 
-projects[context][subdir] = "contrib"
 projects[context][type] = "module"
 projects[context][download][type] = "cvs"
 projects[context][download][module] = "contributions/modules/context"
 projects[context][download][revision] = "DRUPAL-6--3"
 
-projects[spaces][subdir] = "contrib"
 projects[spaces][type] = "module"
 projects[spaces][download][type] = "cvs"
 projects[spaces][download][module] = "contributions/modules/spaces"
 projects[spaces][download][revision] = "DRUPAL-6--3"
-
-
 
 ; Patched.
 ; Explicit versions specified to ensure patches apply cleanly.
