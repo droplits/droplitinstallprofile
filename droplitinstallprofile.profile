@@ -54,7 +54,7 @@ function droplitinstallprofile_profile_modules() {
     // 'imageapi', 'imageapi_gd', 'imagecache',
 
     // Token
-    'token',
+    // 'token',
 
     // Transliteration
     'transliteration',
@@ -94,8 +94,8 @@ function droplitinstallprofile_profile_modules() {
     // 'typogrify', 'spamspan',
 
     // Others
-    'devel', 'diff', 'jquery_update', 'menu_attributes', 'pathauto', 'poormanscron', 'print', 'print_mail', 'vertical_tabs',
-
+    'devel', 'diff', 'jquery_update', 'menu_attributes', 'poormanscron', 'print', 'print_mail', 'vertical_tabs',
+    // 'pathauto', 
     // Spaces design customizer
     // 'color', 'spaces_design',
 
