@@ -24,6 +24,7 @@ projects[htmlpurifier][subdir] = "contrib"
 projects[imce][subdir] = "contrib"
 projects[imce_wysiwyg][subdir] = "contrib"
 projects[install_profile_api][subdir] ="contrib"
+projects[jquery_ui][subdir] = "contrib"
 projects[jquery_update][subdir] = "contrib"
 projects[menu_attributes][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
@@ -55,9 +56,19 @@ projects[xmlsitemap][subdir] = "contrib"
 ; projects[site_variables][location] = "http://client.droplits.net/fserver"
 
 ; Themes
-projects[tao][location] = "http://code.developmentseed.org/fserver"
-projects[rubik][location] = "http://code.developmentseed.org/fserver"
+projects[rubik][type] = "theme"
+projects[rubik][download][type] = "git"
+projects[rubik][download][url] = "git://github.com/developmentseed/rubik.git"
+
+projects[tao][type] = "theme"
+projects[tao][download][type] = "git"
+projects[tao][download][url] = "git://github.com/developmentseed/tao.git"
+
 projects[singular][location] = "http://code.developmentseed.org/fserver"
 
 ; Libraries
 
+libraries[jquery_ui][download][type] = "get"
+libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip"
+libraries[jquery_ui][directory_name] = jquery.ui
+libraries[jquery_ui][destination] = modules/contrib/jquery_ui
