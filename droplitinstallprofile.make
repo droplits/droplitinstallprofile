@@ -51,8 +51,8 @@ projects[xmlsitemap][subdir] = "contrib"
 ; projects[seed][location] = "http://code.developmentseed.org/fserver"
 
 ; Features
-projects[site_variables][subdir] = "features"
-projects[site_variables][location] = "http://client.droplits.net/fserver"
+; projects[site_variables][subdir] = "features"
+; projects[site_variables][location] = "http://client.droplits.net/fserver"
 
 ; Themes
 projects[tao][location] = "http://code.developmentseed.org/fserver"
