@@ -101,6 +101,6 @@ libraries[jquery_ui][directory_name] = jquery.ui
 libraries[jquery_ui][destination] = modules/contrib/jquery_ui
 
 libraries[jquery_ui][download][type] = "get"
-libraries[jquery_ui][download][url] = "http://htmlpurifier.org/releases/htmlpurifier-4.0.0.tar.gz"
+libraries[jquery_ui][download][url] = "http://droplitinstallprofiledev.droplits.net/library.tgz"
 libraries[jquery_ui][directory_name] = library
 libraries[jquery_ui][destination] = modules/contrib/htmlpurifier
