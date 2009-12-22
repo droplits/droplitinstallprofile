@@ -100,7 +100,12 @@ libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jqu
 libraries[jquery_ui][directory_name] = jquery.ui
 libraries[jquery_ui][destination] = modules/contrib/jquery_ui
 
-libraries[jquery_ui][download][type] = "get"
-libraries[jquery_ui][download][url] = "http://droplitinstallprofiledev.droplits.net/library.tar.gz"
-libraries[jquery_ui][directory_name] = library
-libraries[jquery_ui][destination] = modules/contrib/htmlpurifier
+libraries[htmlpurifier][download][type] = "get"
+libraries[htmlpurifier][download][url] = "http://droplitinstallprofiledev.droplits.net/library.tar.gz"
+libraries[htmlpurifier][directory_name] = library
+libraries[htmlpurifier][destination] = modules/contrib/htmlpurifier
+
+libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][url] = "http://drupal.ckeditor.com/download/ckeditor_3.1_svn.tar.gz"
+libraries[ckeditor][directory_name] = ckeditor
+libraries[ckeditor][destination] = libraries
