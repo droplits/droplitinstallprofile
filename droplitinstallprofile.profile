@@ -143,6 +143,9 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     // Other variables worth setting.
     variable_set('site_footer', '<a href="http://droplits.com">Droplits: We Build Web Tools</a>');
 
+    db_query("INSERT INTO {ckeditor_settings} (name, settings) VALUES
+           ('Default', 'a:37:{s:15:"allow_user_conf";s:1:"f";s:7:"filters";a:2:{s:8:"filter/3";i:0;s:8:"filter/0";i:1;}s:2:"ss";s:1:"2";s:8:"min_rows";s:1:"3";s:9:"excl_mode";s:1:"0";s:4:"excl";s:0:"";s:11:"simple_incl";s:0:"";s:7:"default";s:1:"t";s:11:"show_toggle";s:1:"t";s:5:"popup";s:1:"f";s:4:"skin";s:4:"kama";s:7:"uicolor";s:7:"default";s:16:"uicolor_textarea";s:95:"<p>\r\n	Click on the <strong>UI Color Picker</strong> button to set your color preferences.</p>\r\n";s:12:"uicolor_user";s:0:"";s:7:"toolbar";s:11:"DrupalBasic";s:6:"expand";s:1:"t";s:5:"width";s:4:"100%";s:4:"lang";s:2:"en";s:9:"auto_lang";s:1:"t";s:10:"enter_mode";s:1:"p";s:16:"shift_enter_mode";s:2:"br";s:11:"font_format";s:35:"p;div;pre;address;h1;h2;h3;h4;h5;h6";s:8:"css_mode";s:4:"self";s:8:"css_path";s:30:"%tdroplitscube/droplitcube.css";s:9:"css_style";s:4:"self";s:11:"styles_path";s:33:"%tdroplitscube/ckeditor.styles.js";s:11:"filebrowser";s:4:"none";s:17:"filebrowser_image";s:0:"";s:17:"filebrowser_flash";s:0:"";s:13:"UserFilesPath";s:5:"%b%f/";s:21:"UserFilesAbsolutePath";s:7:"%d%b%f/";s:20:"ckeditor_load_method";s:11:"ckeditor.js";s:22:"ckeditor_load_time_out";s:1:"0";s:15:"theme_config_js";s:1:"f";s:7:"js_conf";s:0:"";s:10:"excl_regex";s:0:"";s:17:"simple_incl_regex";s:0:"";}')";
+
     // Clear caches.
     drupal_flush_all_caches();
 
