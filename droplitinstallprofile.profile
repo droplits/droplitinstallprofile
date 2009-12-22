@@ -42,8 +42,7 @@ function droplitinstallprofile_profile_modules() {
     // 'og', 'og_access', 'og_actions', 'og_views',
 
     // Context
-    'context', 'context_contrib', 'context_ui',
-
+    'context', 'context_layouts', 'context_ui', 
     // Date
     // 'date_api', 'date_timezone',
 
@@ -98,6 +97,7 @@ function droplitinstallprofile_profile_modules() {
     // 'pathauto', 
     // Spaces design customizer
     // 'color', 'spaces_design',
+    'spaces', 'spaces_dashboard', 'spaces_ui', 'spaces_user',
 
     // VBO
     // 'views_bulk_operations',
