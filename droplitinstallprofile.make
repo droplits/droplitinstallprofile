@@ -83,9 +83,9 @@ projects[xmlsitemap][subdir] = "contrib"
 ; projects[site_variables][location] = "http://client.droplits.net/fserver"
 
 ; Themes
-projects[rubik][type] = "theme"
-projects[rubik][download][type] = "git"
-projects[rubik][download][url] = "git://github.com/developmentseed/rubik.git"
+projects[droplitrubik][type] = "theme"
+projects[droplitrubik][download][type] = "git"
+projects[droplitrubik][download][url] = "git://github.com/droplits/droplitrubik.git "
 
 projects[tao][type] = "theme"
 projects[tao][download][type] = "git"
