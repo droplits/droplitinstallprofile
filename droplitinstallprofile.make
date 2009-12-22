@@ -112,4 +112,5 @@ libraries[jquery_ui][destination] = modules/contrib/htmlpurifier
 
 libraries[jquery_ui][download][type] = "get"
 libraries[jquery_ui][download][url] = "http://drupal.ckeditor.com/download/ckeditor_3.1_svn.tar.gz"
+libraries[jquery_ui][directory_name] = ckeditor
 libraries[jquery_ui][destination] = libraries
