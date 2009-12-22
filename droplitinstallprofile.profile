@@ -151,9 +151,9 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     // blowing away our changes.
     _droplitinstallprofile_system_theme_data();
     db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
-    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'cube'");
-    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'cube'");
-    variable_set('theme_default', 'cube');
+    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitcube'");
+    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitcube'");
+    variable_set('theme_default', 'droplitcube');
 
     $task = 'finished';
   }  
@@ -171,12 +171,12 @@ function _droplitinstallprofile_modify_settings() {
   // variable_set('user_register', 0);
 
   // Theme related.
-  system_initialize_theme_blocks('singular');
-  variable_set('theme_default', 'singular');
-  $theme_settings = variable_get('theme_settings', array());
-  $theme_settings['toggle_node_info_page'] = FALSE;
-  variable_set('theme_settings', $theme_settings);
-  $theme_key = 'singular';
+  // system_initialize_theme_blocks('droplitcube');
+  // variable_set('theme_default', 'singular');
+  // $theme_settings = variable_get('theme_settings', array());
+  // $theme_settings['toggle_node_info_page'] = FALSE;
+  // variable_set('theme_settings', $theme_settings);
+  // $theme_key = 'singular';
 } // function _droplitinstallprofile_modify_settings
 
 /**
@@ -187,16 +187,16 @@ function _droplitinstallprofile_modify_blocks() {
 
   // Hide "Powered by Drupal".
   db_query("DELETE FROM {blocks} WHERE module = '%s' AND theme = '%s' " .
-           "AND region = '%s'", 'system', 'singular', 'content');
+           "AND region = '%s'", 'system', 'droplitcube', 'content');
 
   // Hide "Navigation".
   db_query("DELETE FROM {blocks} WHERE module = '%s' AND theme = '%s' " .
-           "AND region = '%s'", 'user', 'singular', 'content');  
+           "AND region = '%s'", 'user', 'droplitcube', 'content');  
   
   // Hide "User login".
   db_query("UPDATE {blocks} SET status = %d, region = '%s' " .
            "WHERE theme = '%s' AND bid = %d AND module = '%s'",
-           0, NULL, 'singular', 5, 'user');
+           0, NULL, 'droplitcube', 5, 'user');
 } // function _droplitinstallprofile_modify_blocks
 
 /**
@@ -211,7 +211,7 @@ function _droplitinstallprofile_profile_batch_finished($success, $results) {
 /**
  * Reimplementation of system_theme_data(). The core function's static cache
  * is populated during install prior to active install profile awareness.
- * This workaround makes enabling themes in profiles/managingnews/themes possible.
+ * This workaround makes enabling themes in profiles/droplitinstallprofile/themes possible.
  */
 function _droplitinstallprofile_system_theme_data() {
   global $profile;
