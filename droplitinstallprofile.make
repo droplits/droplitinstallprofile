@@ -85,7 +85,7 @@ projects[xmlsitemap][subdir] = "contrib"
 ; Themes
 projects[droplitrubik][type] = "theme"
 projects[droplitrubik][download][type] = "git"
-projects[droplitrubik][download][url] = "git://github.com/droplits/droplitrubik.git "
+projects[droplitrubik][download][url] = "git://github.com/droplits/droplitrubik.git"
 
 projects[tao][type] = "theme"
 projects[tao][download][type] = "git"
