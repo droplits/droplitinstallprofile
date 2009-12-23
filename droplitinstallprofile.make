@@ -107,4 +107,5 @@ libraries[htmlpurifier][destination] = modules/contrib/htmlpurifier
 
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://client.droplits.net/sites/client.droplits.net/files/ckeditor-3-1.tar.gz"
-libraries[ckeditor][destination] = modules/contrib/ckeditor/ckeditor
+libraries[ckeditor][directory_name] = ckeditor
+libraries[ckeditor][destination] = sites/all/libraries
