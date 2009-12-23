@@ -155,6 +155,12 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitcube'");
     variable_set('theme_default', 'droplitcube');
 
+
+    db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
+    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitrubik'");
+    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitrubik'");
+    variable_set('admin_theme', 'droplitrubik');    
+
     $task = 'finished';
   }  
   
