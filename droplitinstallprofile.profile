@@ -97,7 +97,7 @@ function droplitinstallprofile_profile_modules() {
     // 'pathauto', 
     // Spaces design customizer
     // 'color', 'spaces_design',
-    'spaces', 'spaces_dashboard', 'spaces_ui', 'spaces_user',
+    // 'spaces', 'spaces_dashboard', 'spaces_ui', 'spaces_user',
 
     // VBO
     // 'views_bulk_operations',

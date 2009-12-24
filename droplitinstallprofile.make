@@ -79,8 +79,10 @@ projects[xmlsitemap][subdir] = "contrib"
 ; projects[] = "designkit"
 
 ; Features
-; projects[site_variables][subdir] = "features"
-; projects[site_variables][location] = "http://client.droplits.net/fserver"
+projects[site_variables][subdir] = "features"
+projects[site_variables][location] = "http://client.droplits.net/fserver"
+projects[ckeditor_filter][subdir] = "features"
+projects[ckeditor_filter][location] = "http://client.droplits.net/fserver"
 
 ; Themes
 projects[droplitrubik][type] = "theme"
@@ -108,4 +110,4 @@ libraries[htmlpurifier][destination] = modules/contrib/htmlpurifier
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://client.droplits.net/sites/client.droplits.net/files/ckeditor-3-1.tar.gz"
 libraries[ckeditor][directory_name] = ckeditor
-libraries[ckeditor][destination] = sites/all/libraries
+libraries[ckeditor][destination] = modules/contrib/ckeditor/
