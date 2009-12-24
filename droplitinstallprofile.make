@@ -19,7 +19,7 @@ projects[cck][subdir] = "contrib"
 
 projects[ckeditor][type] = "module"
 projects[ckeditor][download][type] = "cvs"
-projects[ckeditor][download][module] = "contributions/modules/context"
+projects[ckeditor][download][module] = "contributions/modules/ckeditor"
 projects[ckeditor][download][revision] = "DRUPAL-6--1"
 projects[ckeditor][subdir] = "contrib"
 
