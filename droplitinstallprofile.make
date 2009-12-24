@@ -114,6 +114,6 @@ libraries[htmlpurifier][destination] = modules/contrib/htmlpurifier
 
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://drupal.ckeditor.com/download/ckeditor_3.1_svn.zip"
-libraries[ckeditor][destination] = modules/contrib/ckeditor
+libraries[ckeditor][destination] = modules/contrib/ckeditor/ckeditor
 libraries[ckeditor][copy][] = *
 
