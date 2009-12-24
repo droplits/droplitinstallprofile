@@ -16,6 +16,11 @@ projects[advanced_help][subdir] = "contrib"
 projects[backup_migrate][subdir] = "contrib"
 projects[better_formats][subdir] = "contrib"
 projects[cck][subdir] = "contrib"
+
+projects[ckeditor][type] = "module"
+projects[ckeditor][download][type] = "cvs"
+projects[ckeditor][download][module] = "contributions/modules/context"
+projects[ckeditor][download][revision] = "DRUPAL-6--1"
 projects[ckeditor][subdir] = "contrib"
 
 projects[context][type] = "module"
@@ -109,5 +114,6 @@ libraries[htmlpurifier][destination] = modules/contrib/htmlpurifier
 
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://drupal.ckeditor.com/download/ckeditor_3.1_svn.zip"
-libraries[ckeditor][directory_name] = ckeditor
 libraries[ckeditor][destination] = modules/contrib/ckeditor
+libraries[ckeditor][copy][] = *
+
