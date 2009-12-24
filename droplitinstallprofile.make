@@ -108,6 +108,6 @@ libraries[htmlpurifier][directory_name] = library
 libraries[htmlpurifier][destination] = modules/contrib/htmlpurifier
 
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://client.droplits.net/sites/client.droplits.net/files/ckeditor-3-1.tar.gz"
+libraries[ckeditor][download][url] = "http://drupal.ckeditor.com/download/ckeditor_3.1_svn.zip"
 libraries[ckeditor][directory_name] = ckeditor
 libraries[ckeditor][destination] = modules/contrib/ckeditor
