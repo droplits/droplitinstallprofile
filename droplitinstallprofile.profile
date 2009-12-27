@@ -182,10 +182,10 @@ function _droplitinstallprofile_modify_settings() {
   // variable_set('user_register', 0);
 
   // Make an 'administrator' role
-  db_query("INSERT INTO {role} (rid, name) VALUES (3, 'admin user')");
+  // db_query("INSERT INTO {role} (rid, name) VALUES (3, 'admin')");
 
-  // Add user 1 to the 'admin user' role
-  db_query("INSERT INTO {users_roles} VALUES (1, 3)");
+  // Add user 1 to the 'admin' role
+  // db_query("INSERT INTO {users_roles} VALUES (1, 3)");
 
   // Theme related.
   // system_initialize_theme_blocks('droplitcube');
