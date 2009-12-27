@@ -181,6 +181,12 @@ function _droplitinstallprofile_modify_settings() {
   // variable_set('site_frontpage', 'home');
   // variable_set('user_register', 0);
 
+  // Make an 'administrator' role
+  db_query("INSERT INTO {role} (rid, name) VALUES (3, 'admin user')");
+
+  // Add user 1 to the 'admin user' role
+  db_query("INSERT INTO {users_roles} VALUES (1, 3)");
+
   // Theme related.
   // system_initialize_theme_blocks('droplitcube');
   // variable_set('theme_default', 'droplitcube');
@@ -194,7 +200,7 @@ function _droplitinstallprofile_modify_settings() {
  * Modify the block settings.
  */
 function _droplitinstallprofile_modify_blocks() {
-  _block_rehash();  // Fill the DB with default block info for Singular.
+  _block_rehash();  // Fill the DB with default block info for droplitcube.
 
   // Hide "Powered by Drupal".
   db_query("DELETE FROM {blocks} WHERE module = '%s' AND theme = '%s' " .
