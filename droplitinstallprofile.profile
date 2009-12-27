@@ -38,9 +38,6 @@ function droplitinstallprofile_profile_modules() {
     // Views
     'views', 'views_ui',
 
-    // OG
-    // 'og', 'og_access', 'og_actions', 'og_views',
-
     // Context
     'context', 'context_layouts', 'context_ui', 
     // Date
