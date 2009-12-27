@@ -12,7 +12,7 @@ projects[addanother][subdir] = "contrib"
 ; projects[admin][subdir] = "contrib"
 
 projects[admin][subdir] = "contrib"
-projects[admin][version] = 2.x-dev
+projects[admin][version] = 2.0
 
 projects[admin_menu][subdir] = "contrib"
 projects[advanced_help][subdir] = "contrib"
@@ -27,7 +27,7 @@ projects[cck][subdir] = "contrib"
 ; projects[ckeditor][subdir] = "contrib"
 
 projects[ckeditor][subdir] = "contrib"
-projects[ckeditor][version] = 1.x-dev
+projects[ckeditor][version] = 1.0
 
 projects[context][type] = "module"
 projects[context][download][type] = "cvs"
