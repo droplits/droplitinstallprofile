@@ -149,7 +149,7 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     variable_set('site_footer', '<a href="http://droplits.com">Droplits: We Build Web Tools</a>');
 
     // Remove default input filter formats
-    $result = db_query("SELECT * FROM {filter_formats} WHERE name IN ('%s', '%s')", 'Filtered HTML', 'Full HTML');
+    $result = db_query("SELECT * FROM {filter_formats} WHERE name IN ('%s', '%s')", 'Filtered HTML');
     while ($row = db_fetch_object($result)) {
       db_query("DELETE FROM {filter_formats} WHERE format = %d", $row->format);
       db_query("DELETE FROM {filters} WHERE format = %d", $row->format);
