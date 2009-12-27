@@ -141,8 +141,20 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
   if ($task == 'dip-configure') {
 
     // Other variables worth setting.
+
+    // Set time zone
+    $tz_offset = date('Z');
+    variable_set('date_default_timezone', $tz_offset);
+    
     variable_set('site_footer', '<a href="http://droplits.com">Droplits: We Build Web Tools</a>');
 
+    // Remove default input filter formats
+    $result = db_query("SELECT * FROM {filter_formats} WHERE name IN ('%s', '%s')", 'Filtered HTML', 'Full HTML');
+    while ($row = db_fetch_object($result)) {
+      db_query("DELETE FROM {filter_formats} WHERE format = %d", $row->format);
+      db_query("DELETE FROM {filters} WHERE format = %d", $row->format);
+    }
+    
     // Clear caches.
     drupal_flush_all_caches();
 
@@ -159,7 +171,7 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
     db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitrubik'");
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitrubik'");
-    variable_set('admin_theme', 'droplitrubik');    
+    variable_set('admin_theme', 'droplitrubik');
 
     $task = 'finished';
   }  
@@ -178,11 +190,11 @@ function _droplitinstallprofile_modify_settings() {
 
   // Theme related.
   // system_initialize_theme_blocks('droplitcube');
-  // variable_set('theme_default', 'singular');
+  // variable_set('theme_default', 'droplitcube');
   // $theme_settings = variable_get('theme_settings', array());
   // $theme_settings['toggle_node_info_page'] = FALSE;
   // variable_set('theme_settings', $theme_settings);
-  // $theme_key = 'singular';
+  // $theme_key = 'droplitcube';
 } // function _droplitinstallprofile_modify_settings
 
 /**
