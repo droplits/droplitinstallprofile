@@ -5,14 +5,11 @@ core = 6.x
 ; Contrib projects
 projects[addanother][subdir] = "contrib"
 
-; projects[admin][type] = "module"
-; projects[admin][download][type] = "cvs"
-; projects[admin][download][module] = "contributions/modules/admin"
-; projects[admin][download][revision] = "DRUPAL-6--2"
-; projects[admin][subdir] = "contrib"
-
+projects[admin][type] = "module"
+projects[admin][download][type] = "cvs"
+projects[admin][download][module] = "contributions/modules/admin"
+projects[admin][download][revision] = "DRUPAL-6--2"
 projects[admin][subdir] = "contrib"
-projects[admin][version] = 2.0
 
 projects[admin_menu][subdir] = "contrib"
 projects[advanced_help][subdir] = "contrib"
@@ -20,14 +17,11 @@ projects[backup_migrate][subdir] = "contrib"
 projects[better_formats][subdir] = "contrib"
 projects[cck][subdir] = "contrib"
 
-; projects[ckeditor][type] = "module"
-; projects[ckeditor][download][type] = "cvs"
-; projects[ckeditor][download][module] = "contributions/modules/ckeditor"
-; projects[ckeditor][download][revision] = "DRUPAL-6--1"
-; projects[ckeditor][subdir] = "contrib"
-
+projects[ckeditor][type] = "module"
+projects[ckeditor][download][type] = "cvs"
+projects[ckeditor][download][module] = "contributions/modules/ckeditor"
+projects[ckeditor][download][revision] = "DRUPAL-6--1"
 projects[ckeditor][subdir] = "contrib"
-projects[ckeditor][version] = 1.0
 
 projects[context][type] = "module"
 projects[context][download][type] = "cvs"
