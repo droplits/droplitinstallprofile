@@ -91,6 +91,8 @@ projects[ckeditor_filter][subdir] = "features"
 projects[ckeditor_filter][location] = "http://features.droplits.net/fserver"
 
 ; Themes
+projects[imce][location] = "http://features.droplits.net/fserver"
+
 projects[droplitrubik][type] = "theme"
 projects[droplitrubik][download][type] = "git"
 projects[droplitrubik][download][url] = "git://github.com/droplits/droplitrubik.git"
@@ -100,9 +102,6 @@ projects[tao][download][type] = "git"
 projects[tao][download][url] = "git://github.com/developmentseed/tao.git"
 
 projects[singular][location] = "http://code.developmentseed.org/fserver"
-
-projects[imce][location] = "http://features.droplits.net/fserver"
-
 
 ; Libraries
 
