@@ -91,6 +91,7 @@ projects[ckeditor_filter][subdir] = "features"
 projects[ckeditor_filter][location] = "http://features.droplits.net/fserver"
 
 ; Themes
+projects[imce][type] = "theme"
 projects[imce][location] = "http://features.droplits.net/fserver"
 
 projects[droplitrubik][type] = "theme"
