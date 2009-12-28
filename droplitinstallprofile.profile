@@ -139,10 +139,6 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
 
     // Other variables worth setting.
 
-    // Set time zone
-    $tz_offset = date('Z');
-    variable_set('date_default_timezone', $tz_offset);
-    
     variable_set('site_footer', '<a href="http://droplits.com">Droplits: We Build Web Tools</a>');
 
     // Clear caches.
@@ -153,14 +149,13 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     // blowing away our changes.
     _droplitinstallprofile_system_theme_data();
     db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
+    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitimce'");
     db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitcube'");
-    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitcube'");
-    variable_set('theme_default', 'droplitcube');
-
-
-    db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
     db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitrubik'");
+    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitimce'");
+    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitcube'");
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitrubik'");
+    variable_set('theme_default', 'droplitcube');
     variable_set('admin_theme', 'droplitrubik');
 
     $task = 'finished';
