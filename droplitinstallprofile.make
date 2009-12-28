@@ -20,14 +20,11 @@ projects[backup_migrate][subdir] = "contrib"
 projects[better_formats][subdir] = "contrib"
 projects[cck][subdir] = "contrib"
 
-; projects[ckeditor][type] = "module"
-; projects[ckeditor][download][type] = "cvs"
-; projects[ckeditor][download][module] = "contributions/modules/ckeditor"
-; projects[ckeditor][download][revision] = "DRUPAL-6--1"
-; projects[ckeditor][subdir] = "contrib"
-
+projects[ckeditor][type] = "module"
+projects[ckeditor][download][type] = "cvs"
+projects[ckeditor][download][module] = "contributions/modules/ckeditor"
+projects[ckeditor][download][revision] = "DRUPAL-6--1"
 projects[ckeditor][subdir] = "contrib"
-projects[ckeditor][version] = 1.x-dev
 
 projects[context][type] = "module"
 projects[context][download][type] = "cvs"
