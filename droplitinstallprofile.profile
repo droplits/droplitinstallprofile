@@ -119,6 +119,7 @@ function droplitinstallprofile_profile_task_list() {
 function droplitinstallprofile_profile_tasks(&$task, $url) {
   _droplitinstallprofile_modify_settings();
   _droplitinstallprofile_modify_blocks();
+  _droplitinstallprofile_set_content_types();
 
   if ($task == 'profile') {
     $batch = array(
@@ -157,6 +158,15 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitrubik'");
     variable_set('theme_default', 'droplitcube');
     variable_set('admin_theme', 'droplitrubik');
+
+    system_initialize_theme_blocks('droplitcube');
+    system_initialize_theme_blocks('droplitrubik');
+  
+  // Theme settings.
+  $theme_settings = variable_get('theme_settings', array());
+  $theme_settings['toggle_node_info_page'] = FALSE;
+  variable_set('theme_settings', $theme_settings);
+
 
     $task = 'finished';
   }  
@@ -209,6 +219,35 @@ function _droplitinstallprofile_modify_blocks() {
  */
 function _droplitinstallprofile_profile_batch_finished($success, $results) {
   variable_set('install_task', 'dip-configure');
+}
+
+/**
+ * Set the content types for this profile.
+ */
+function _droplitinstallprofile_set_content_types() {
+  // Define content types
+  $page_description = st('A Page.');
+  $types = array (
+    array(
+      'type' => 'page',
+      'name' => st('Page'),
+      'module' => 'node',
+      'description' => $page_description,
+      'custom' => TRUE,
+      'modified' => TRUE,
+      'locked' => FALSE,
+    ),
+  );
+
+  // Save the node types.
+  foreach ($types as $type) {
+    $type = (object) _node_type_set_defaults($type);
+    node_type_save($type);
+  }
+
+  // Disable "Promoted to front page" for pages.
+  variable_set('node_options_page', array('status'));
+
 }
 
 /**
