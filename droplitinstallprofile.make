@@ -77,8 +77,8 @@ projects[views][subdir] = "contrib"
 ; Features
 projects[site_variables][subdir] = "features"
 projects[site_variables][location] = "http://features.droplits.net/fserver"
-projects[droplitwysiwyg][subdir] = "features"
-projects[droplitwysiwyg][location] = "http://features.droplits.net/fserver"
+projects[droplitfilters][subdir] = "features"
+projects[droplitfilters][location] = "http://features.droplits.net/fserver"
 
 ; Themes
 projects[droplitimce][type] = "theme"
