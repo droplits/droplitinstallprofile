@@ -40,33 +40,18 @@ function droplitinstallprofile_profile_modules() {
 
     // Context
     'context', 'context_layouts', 'context_ui', 
-    // Date
-    // 'date_api', 'date_timezone',
 
     // Features
     'features',
-
-    // Image
-    // 'imageapi', 'imageapi_gd', 'imagecache',
-
-    // Token
-    // 'token',
 
     // Transliteration
     'transliteration',
 
     // PURL
     'purl',
-    // 'site_variables',
 
     // Strongarm
     'strongarm',
-
-    // Core features
-    // 'book',
-
-    // Calendar, date
-    // 'date', 'date_popup', 'litecal',
 
     // CCK
     'content', 'nodereference', 'text', 'optionwidgets',
@@ -74,30 +59,12 @@ function droplitinstallprofile_profile_modules() {
     // Ctools
     'ctools', 'page_manager',
 
-    // FeedAPI
-    // 'feedapi', 'feedapi_node', 'feedapi_mapper', 'feedapi_inherit', 'parser_ical',
-
-    // Notifications
-    // 'notifications_team', 'mail2web', 'mailhandler',
-
-    // Content profile
-    // 'content_profile',
-
-    // Formats
-    // 'wysiwyg', 'ckeditor', 'htmlpurifier'
-
-    // 'codefilter', 'markdown',
-    // 'typogrify', 'spamspan',
-
     // Others
-    'devel', 'diff', 'jquery_update', 'menu_attributes', 'poormanscron', 'print', 'print_mail', 'vertical_tabs',
-    // 'pathauto', 
+    'devel', 'diff', 'jquery_update', 'print', 'print_mail', 'vertical_tabs',
+
     // Spaces design customizer
     // 'color', 'spaces_design',
     // 'spaces', 'spaces_dashboard', 'spaces_ui', 'spaces_user',
-
-    // VBO
-    // 'views_bulk_operations',
 
   );
 
@@ -135,7 +102,6 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     batch_process($url, $url);
   }
 
-
   if ($task == 'dip-configure') {
 
     // Other variables worth setting.
@@ -159,6 +125,7 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     variable_set('theme_default', 'droplitcube');
     variable_set('admin_theme', 'droplitrubik');
 
+    system_initialize_theme_blocks('droplitimce');
     system_initialize_theme_blocks('droplitcube');
     system_initialize_theme_blocks('droplitrubik');
   
@@ -183,13 +150,6 @@ function _droplitinstallprofile_modify_settings() {
   // variable_set('site_frontpage', 'home');
   // variable_set('user_register', 0);
 
-  // Theme related.
-  // system_initialize_theme_blocks('droplitcube');
-  // variable_set('theme_default', 'droplitcube');
-  // $theme_settings = variable_get('theme_settings', array());
-  // $theme_settings['toggle_node_info_page'] = FALSE;
-  // variable_set('theme_settings', $theme_settings);
-  // $theme_key = 'droplitcube';
 } // function _droplitinstallprofile_modify_settings
 
 /**
@@ -226,7 +186,7 @@ function _droplitinstallprofile_profile_batch_finished($success, $results) {
  */
 function _droplitinstallprofile_set_content_types() {
   // Define content types
-  $page_description = st('A Page.');
+  $page_description = st('A page is a for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a page entry does not allow visitor comments and is not featured on the site's initial home page.');
   $types = array (
     array(
       'type' => 'page',
