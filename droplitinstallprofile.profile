@@ -186,7 +186,7 @@ function _droplitinstallprofile_profile_batch_finished($success, $results) {
  */
 function _droplitinstallprofile_set_content_types() {
   // Define content types
-  $page_description = st('A page is a for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a page entry does not allow visitor comments and is not featured on the site's initial home page.');
+  $page_description = st('A page is a for creating and displaying information that rarely changes, such as an \"About us\" section of a website. By default, a page entry does not allow visitor comments and is not featured on the site\'s initial home page.');
   $types = array (
     array(
       'type' => 'page',
