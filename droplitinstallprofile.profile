@@ -60,7 +60,7 @@ function droplitinstallprofile_profile_modules() {
     'ctools', 'page_manager',
 
     // Others
-    'devel', 'diff', 'jquery_update', 'print', 'print_mail', 'vertical_tabs',
+    'devel', 'diff', 'jquery_update', 'print', 'print_mail', 'vertical_tabs', 'install_profile_api',
 
     // Spaces design customizer
     // 'color', 'spaces_design',
@@ -84,6 +84,7 @@ function droplitinstallprofile_profile_task_list() {
  * Implementation of hook_profile_tasks().
  */
 function droplitinstallprofile_profile_tasks(&$task, $url) {
+  install_include(droplitinstallprofile_profile_modules());
   _droplitinstallprofile_modify_settings();
   _droplitinstallprofile_modify_blocks();
   _droplitinstallprofile_set_content_types();
@@ -158,7 +159,11 @@ function _droplitinstallprofile_modify_settings() {
  * Set the roles and permissions that will be used in this profile.
  */
 function _droplitinstallprofile_set_permissions() {
+  // Define new roles.
+  db_query("INSERT INTO {role} (rid, name) VALUES (3, 'admin')");
 
+  // Make user 1 an administrator.
+  db_query("INSERT INTO {users_roles} VALUES (1, 3)");
 
   // Update "anonymous user" permissions.
   db_query("UPDATE {permission} SET perm = '%s' WHERE rid = %d",
