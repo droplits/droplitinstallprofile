@@ -108,7 +108,7 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
 
     // Create the admin role.
     db_query("INSERT INTO {role} (name) VALUES ('%s')", 'admin');
-    db_query("INSERT INTO {users_roles} (uid, rid) VALUES ('%d, %d')", 1, 3);
+    db_query("INSERT INTO {users_roles} VALUES (1, 3)");
     
     // Other variables worth setting.
 
