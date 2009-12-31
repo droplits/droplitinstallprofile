@@ -87,6 +87,7 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
   _droplitinstallprofile_modify_settings();
   _droplitinstallprofile_modify_blocks();
   _droplitinstallprofile_set_content_types();
+  _droplitinstallprofile_set_permissions();
 
   if ($task == 'profile') {
     $batch = array(
@@ -151,6 +152,39 @@ function _droplitinstallprofile_modify_settings() {
   // variable_set('user_register', 0);
 
 } // function _droplitinstallprofile_modify_settings
+
+
+/**
+ * Set the roles and permissions that will be used in this profile.
+ */
+function _droplitinstallprofile_set_permissions() {
+  // Define new roles.
+  db_query("INSERT INTO {role} (rid, name) VALUES(%d, '%s')", 3, 'admin');
+
+  // Make user 1 an administrator.
+  db_query("INSERT INTO {users_roles} VALUES (1, 3)");
+
+  // Update "anonymous user" permissions.
+  db_query("UPDATE {permission} SET perm = '%s' WHERE rid = %d",
+           'access content, access print, access send to friend, search content', 1);
+
+  // Update "authenticated user" permissions.
+  db_query("UPDATE {permission} SET perm = '%s' WHERE rid = %d",
+           'access content, access print, access send to friend, ' .
+           'search content, change own username', 2);
+
+  // Set administrator permissions (all permissions).
+  $all_perm = 'use admin toolbar, administer blocks, administer menu, ' .
+              'access content, administer nodes, create page content, ' .
+              'delete any page content, delete own page content, delete revisions, ' .	      
+              'edit any page content, edit own page content, revert revisions, view revisions, ' .
+              'access print, administer print, node-specific print configuration, access send to friend, ' .
+              'search content, use advanced search, administer files, administer site configuration, ' .
+              'access user profiles, administer users, change own username ';
+  db_query("INSERT INTO {permission} (rid, perm, tid) VALUES (3, '%s', 0)",
+           $all_perm);
+
+}
 
 /**
  * Modify the block settings.
