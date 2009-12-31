@@ -106,6 +106,10 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
 
   if ($task == 'dip-configure') {
 
+    // Create the admin role.
+    db_query("INSERT INTO {role} (name) VALUES ('%s')", 'admin');
+    db_query("INSERT INTO {users_roles} (uid, rid) VALUES ('%d, %d')", 1, 3);
+
     // Other variables worth setting.
 
     variable_set('site_footer', '<a href="http://droplits.com">Droplits: We Build Web Tools</a>');
