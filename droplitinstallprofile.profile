@@ -160,10 +160,10 @@ function _droplitinstallprofile_modify_settings() {
  */
 function _droplitinstallprofile_set_permissions() {
   // Define new roles.
-  db_query("INSERT INTO {role} (rid, name) VALUES (3, 'admin')");
+  // db_query("INSERT INTO {role} (rid, name) VALUES (3, 'admin')");
 
   // Make user 1 an administrator.
-  db_query("INSERT INTO {users_roles} VALUES (1, 3)");
+  // db_query("INSERT INTO {users_roles} VALUES (1, 3)");
 
   // Update "anonymous user" permissions.
   db_query("UPDATE {permission} SET perm = '%s' WHERE rid = %d",
