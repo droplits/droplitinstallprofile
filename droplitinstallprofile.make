@@ -33,11 +33,8 @@ projects[ckeditor][subdir] = "contrib"
 
 projects[content_taxonomy][subdir] = "contrib"
 
-projects[context][type] = "module"
-projects[context][download][type] = "cvs"
-projects[context][download][module] = "contributions/modules/context"
-projects[context][download][revision] = "DRUPAL-6--3"
 projects[context][subdir] = "contrib"
+projects[context][version] = 3.0-alpha1
 
 projects[ctools][subdir] = "contrib"
 
@@ -46,7 +43,7 @@ projects[custom_breadcrumbs][version] = 2.0-beta2
 
 projects[date][type] = "module"
 projects[date][download][type] = "cvs"
-projects[date][download][module] = "contributions/modules/context"
+projects[date][download][module] = "contributions/modules/date"
 projects[date][download][revision] = "DRUPAL-6--2"
 projects[date][subdir] = "contrib"
 

@@ -84,7 +84,7 @@ function droplitinstallprofile_profile_task_list() {
  * Implementation of hook_profile_tasks().
  */
 function droplitinstallprofile_profile_tasks(&$task, $url) {
-  install_include(droplitinstallprofile_profile_modules());
+  install_include(array_merge(droplitinstallprofile_profile_modules()));
   _droplitinstallprofile_modify_settings();
   _droplitinstallprofile_modify_blocks();
   _droplitinstallprofile_set_content_types();
