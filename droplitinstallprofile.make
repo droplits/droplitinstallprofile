@@ -3,13 +3,14 @@
 core = 6.x
 
 ; Contrib projects
-projects[addanother][subdir] = "contrib"
 
-; projects[admin][type] = "module"
-; projects[admin][download][type] = "cvs"
-; projects[admin][download][module] = "contributions/modules/admin"
-; projects[admin][download][revision] = "DRUPAL-6--2"
-; projects[admin][subdir] = "contrib"
+projects[active_tags][type] = "module"
+projects[active_tags][download][type] = "cvs"
+projects[active_tags][download][module] = "contributions/modules/active_tags"
+projects[active_tags][download][revision] = "DRUPAL-6--1"
+projects[active_tags][subdir] = "contrib"
+
+projects[addanother][subdir] = "contrib"
 
 projects[admin][subdir] = "contrib"
 projects[admin][version] = 2.0-alpha4
@@ -18,7 +19,7 @@ projects[advanced_help][subdir] = "contrib"
 
 projects[calendar][type] = "module"
 projects[calendar][download][type] = "cvs"
-projects[calendar][download][module] = "contributions/modules/context"
+projects[calendar][download][module] = "contributions/modules/calendar"
 projects[calendar][download][revision] = "DRUPAL-6--2"
 projects[calendar][subdir] = "contrib"
 
@@ -30,6 +31,8 @@ projects[ckeditor][download][module] = "contributions/modules/ckeditor"
 projects[ckeditor][download][revision] = "DRUPAL-6--1"
 projects[ckeditor][subdir] = "contrib"
 
+projects[content_taxonomy][subdir] = "contrib"
+
 projects[context][type] = "module"
 projects[context][download][type] = "cvs"
 projects[context][download][module] = "contributions/modules/context"
@@ -37,6 +40,9 @@ projects[context][download][revision] = "DRUPAL-6--3"
 projects[context][subdir] = "contrib"
 
 projects[ctools][subdir] = "contrib"
+
+projects[custom_breadcrumbs][subdir] = "contrib"
+projects[custom_breadcrumbs][version] = 2.0-beta2
 
 projects[date][type] = "module"
 projects[date][download][type] = "cvs"
@@ -52,8 +58,20 @@ projects[google_analytics][subdir] = "contrib"
 projects[imageapi][subdir] = "contrib"
 projects[imagecache][subdir] = "contrib"
 projects[imce][subdir] = "contrib"
+projects[install_profile_api][subdir] = "contrib"
+
+projects[jquery_ui][type] = "module"
+projects[jquery_ui][download][type] = "cvs"
+projects[jquery_ui][download][module] = "contributions/modules/jquery_ui"
+projects[jquery_ui][download][revision] = "DRUPAL-6--1"
 projects[jquery_ui][subdir] = "contrib"
+
+projects[jquery_update][type] = "module"
+projects[jquery_update][download][type] = "cvs"
+projects[jquery_update][download][module] = "contributions/modules/jquery_update"
+projects[jquery_update][download][revision] = "DRUPAL-6--2"
 projects[jquery_update][subdir] = "contrib"
+
 projects[menu_attributes][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
 projects[path_redirect][subdir] = "contrib"
@@ -93,6 +111,8 @@ projects[site_variables][subdir] = "features"
 projects[site_variables][location] = "http://features.droplits.net/fserver"
 projects[droplitfilters][subdir] = "features"
 projects[droplitfilters][location] = "http://features.droplits.net/fserver"
+projects[droplitevent][subdir] = "features"
+projects[droplitevent][location] = "http://features.droplits.net/fserver"
 
 ; Themes
 projects[droplitimce][type] = "theme"
