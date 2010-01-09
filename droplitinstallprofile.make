@@ -25,7 +25,7 @@ projects[advanced_help][subdir] = "contrib"
 
 projects[calendar][type] = "module"
 projects[calendar][download][type] = "cvs"
-projects[calendar][download][module] = "contributions/modules/context"
+projects[calendar][download][module] = "contributions/modules/calendar"
 projects[calendar][download][revision] = "DRUPAL-6--2"
 projects[calendar][subdir] = "contrib"
 
