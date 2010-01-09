@@ -52,7 +52,7 @@ projects[custom_breadcrumbs][version] = 2.0-beta2
 
 projects[date][type] = "module"
 projects[date][download][type] = "cvs"
-projects[date][download][module] = "contributions/modules/context"
+projects[date][download][module] = "contributions/modules/date"
 projects[date][download][revision] = "DRUPAL-6--2"
 projects[date][subdir] = "contrib"
 
