@@ -1,10 +1,6 @@
 ; $Id: droplitinstallprofile.make,v 1.1.2.5 2009/11/29 00:14:46 droplits Exp $
 ; Test Update
-
-core = "6.x"
-projects[pressflow][type] = "core"
-projects[pressflow][download][type] = "git"
-projects[pressflow][download][url] = git://github.com/bigmack83/pressflow-6.git
+core = 6.x
 
 ; Contrib projects
 
