@@ -13,7 +13,7 @@ projects[active_tags][subdir] = "contrib"
 projects[addanother][subdir] = "contrib"
 
 projects[admin][subdir] = "contrib"
-projects[admin][version] = 2.0-alpha4
+projects[admin][version] = 2.0-alpha5
 
 projects[advanced_help][subdir] = "contrib"
 
@@ -34,7 +34,7 @@ projects[ckeditor][subdir] = "contrib"
 projects[content_taxonomy][subdir] = "contrib"
 
 projects[context][subdir] = "contrib"
-projects[context][version] = 3.0-alpha1
+projects[context][version] = 3.0-alpha2
 
 projects[ctools][subdir] = "contrib"
 
@@ -75,19 +75,24 @@ projects[path_redirect][subdir] = "contrib"
 projects[print][subdir] = "contrib"
 projects[purl][subdir] = "contrib"
 
-projects[spaces][type] = "module"
-projects[spaces][download][type] = "cvs"
-projects[spaces][download][module] = "contributions/modules/spaces"
-projects[spaces][download][revision] = "DRUPAL-6--3"
+; projects[spaces][type] = "module"
+; projects[spaces][download][type] = "cvs"
+; projects[spaces][download][module] = "contributions/modules/spaces"
+; projects[spaces][download][revision] = "DRUPAL-6--3"
+; projects[spaces][subdir] = "contrib"
+
 projects[spaces][subdir] = "contrib"
+projects[spaces][version] = 3.0-alpha2
 
 ; projects[spamspan][subdir] = "contrib"
 
-projects[strongarm][type] = "module"
-projects[strongarm][download][type] = "cvs"
-projects[strongarm][download][module] = "contributions/modules/strongarm"
-projects[strongarm][download][revision] = "DRUPAL-6--2"
 projects[strongarm][subdir] = "contrib"
+
+; projects[strongarm][type] = "module"
+; projects[strongarm][download][type] = "cvs"
+; projects[strongarm][download][module] = "contributions/modules/strongarm"
+; projects[strongarm][download][revision] = "DRUPAL-6--2"
+; projects[strongarm][subdir] = "contrib"
 
 projects[themekey][subdir] = "contrib"
 projects[token][subdir] = "contrib"
@@ -116,9 +121,9 @@ projects[droplitimce][type] = "theme"
 projects[droplitimce][download][type] = "git"
 projects[droplitimce][download][url] = "git://github.com/droplits/droplitimce.git"
 
-projects[droplitrubik][type] = "theme"
-projects[droplitrubik][download][type] = "git"
-projects[droplitrubik][download][url] = "git://github.com/droplits/droplitrubik.git"
+projects[droplitcube][type] = "theme"
+projects[droplitcube][download][type] = "git"
+projects[droplitcube][download][url] = "git://github.com/droplits/droplitcube.git"
 
 projects[tao][type] = "theme"
 projects[tao][download][type] = "git"
@@ -132,6 +137,7 @@ libraries[jquery_ui][directory_name] = jquery.ui
 libraries[jquery_ui][destination] = modules/contrib/jquery_ui
 
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://drupal.ckeditor.com/download/ckeditor_3.1_svn.zip"
+; libraries[ckeditor][download][url] = "http://drupal.ckeditor.com/download/ckeditor_3.1_svn.zip"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/Nightly%20Build/ckeditor_nightly.zip"
 libraries[ckeditor][destination] = modules/contrib/ckeditor/ckeditor
 libraries[ckeditor][copy][] = *
