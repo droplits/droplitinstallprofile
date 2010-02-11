@@ -31,10 +31,11 @@ projects[ckeditor][download][module] = "contributions/modules/ckeditor"
 projects[ckeditor][download][revision] = "DRUPAL-6--1"
 projects[ckeditor][subdir] = "contrib"
 
+projects[content_profile][subdir] = "contrib"
 projects[content_taxonomy][subdir] = "contrib"
 
 projects[context][subdir] = "contrib"
-projects[context][version] = 3.0-alpha2
+projects[context][version] = 3.0-beta1
 
 projects[ctools][subdir] = "contrib"
 
@@ -49,6 +50,7 @@ projects[date][subdir] = "contrib"
 
 projects[devel][subdir] = "contrib"
 projects[diff][subdir] = "contrib"
+projects[draggableviews][subdir] = "contrib"
 projects[features][subdir] = "contrib"
 projects[globalredirect][subdir] = "contrib"
 projects[google_analytics][subdir] = "contrib"
@@ -82,7 +84,7 @@ projects[purl][subdir] = "contrib"
 ; projects[spaces][subdir] = "contrib"
 
 projects[spaces][subdir] = "contrib"
-projects[spaces][version] = 3.0-alpha2
+projects[spaces][version] = 3.0-beta1
 
 ; projects[spamspan][subdir] = "contrib"
 
