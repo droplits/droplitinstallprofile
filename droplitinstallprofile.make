@@ -54,7 +54,10 @@ projects[draggableviews][subdir] = "contrib"
 projects[features][subdir] = "contrib"
 projects[feeds][subdir] = "contrib"
 projects[filefield][subdir] = "contrib"
+
 projects[flag][subdir] = "contrib"
+projects[flag][version] = 2.0-beta2
+
 projects[flag_weights][subdir] = "contrib"
 projects[form][subdir] = "contrib"
 projects[globalredirect][subdir] = "contrib"
