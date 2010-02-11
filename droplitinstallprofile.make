@@ -127,6 +127,10 @@ projects[droplitcube][download][url] = "git://github.com/droplits/droplitcube.gi
 
 projects[tao][type] = "theme"
 projects[tao][download][type] = "git"
+projects[tao][download][url] = "git://github.com/developmentseed/rubik.git"
+
+projects[tao][type] = "theme"
+projects[tao][download][type] = "git"
 projects[tao][download][url] = "git://github.com/developmentseed/tao.git"
 
 ; Libraries
