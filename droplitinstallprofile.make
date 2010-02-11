@@ -125,9 +125,9 @@ projects[droplitcube][type] = "theme"
 projects[droplitcube][download][type] = "git"
 projects[droplitcube][download][url] = "git://github.com/droplits/droplitcube.git"
 
-projects[tao][type] = "theme"
-projects[tao][download][type] = "git"
-projects[tao][download][url] = "git://github.com/developmentseed/rubik.git"
+projects[rubik][type] = "theme"
+projects[rubik][download][type] = "git"
+projects[rubik][download][url] = "git://github.com/developmentseed/rubik.git"
 
 projects[tao][type] = "theme"
 projects[tao][download][type] = "git"
