@@ -124,16 +124,16 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
     db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitimce'");
     db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitcube'");
-    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitrubik'");
+    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'rubik'");
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitimce'");
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitcube'");
-    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitrubik'");
+    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'rubik'");
     variable_set('theme_default', 'droplitcube');
-    variable_set('admin_theme', 'droplitrubik');
+    variable_set('admin_theme', 'rubik');
 
     system_initialize_theme_blocks('droplitimce');
     system_initialize_theme_blocks('droplitcube');
-    system_initialize_theme_blocks('droplitrubik');
+    system_initialize_theme_blocks('rubik');
   
   // Theme settings.
   $theme_settings = variable_get('theme_settings', array());
