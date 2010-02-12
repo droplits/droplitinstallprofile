@@ -89,7 +89,7 @@ projects[modalframe_contrib][subdir] = "contrib"
 projects[nice_menus][type] = "module"
 projects[nice_menus][download][type] = "cvs"
 projects[nice_menus][download][module] = "contributions/modules/nice_menus"
-projects[nice_menus][download][revision] = "DRUPAL-6--2"
+projects[nice_menus][download][revision] = "HEAD"
 projects[nice_menus][subdir] = "contrib"
 
 projects[onbeforeunload][subdir] = "contrib"
