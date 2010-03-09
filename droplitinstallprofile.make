@@ -4,16 +4,16 @@ core = 6.x
 
 ; Contrib projects
 
-projects[active_tags][type] = "module"
-projects[active_tags][download][type] = "cvs"
-projects[active_tags][download][module] = "contributions/modules/active_tags"
-projects[active_tags][download][revision] = "DRUPAL-6--1"
-projects[active_tags][subdir] = "contrib"
+; projects[active_tags][type] = "module"
+; projects[active_tags][download][type] = "cvs"
+; projects[active_tags][download][module] = "contributions/modules/active_tags"
+; projects[active_tags][download][revision] = "DRUPAL-6--1"
+; projects[active_tags][subdir] = "contrib"
 
 projects[addanother][subdir] = "contrib"
 
 projects[admin][subdir] = "contrib"
-projects[admin][version] = 2.0-alpha5
+projects[admin][version] = 2.0-beta2
 
 projects[advanced_help][subdir] = "contrib"
 
@@ -35,7 +35,7 @@ projects[content_profile][subdir] = "contrib"
 projects[content_taxonomy][subdir] = "contrib"
 
 projects[context][subdir] = "contrib"
-projects[context][version] = 3.0-beta1
+projects[context][version] = 3.0-beta4
 
 projects[ctools][subdir] = "contrib"
 
@@ -67,7 +67,7 @@ projects[imageapi][subdir] = "contrib"
 projects[imagecache][subdir] = "contrib"
 projects[imagefield][subdir] = "contrib"
 projects[imce][subdir] = "contrib"
-projects[install_profile_api][subdir] = "contrib"
+; projects[install_profile_api][subdir] = "contrib"
 
 projects[jquery_ui][type] = "module"
 projects[jquery_ui][download][type] = "cvs"
@@ -82,9 +82,9 @@ projects[jquery_update][download][revision] = "DRUPAL-6--2"
 projects[jquery_update][subdir] = "contrib"
 
 projects[menu_attributes][subdir] = "contrib"
-projects[modalframe][subdir] = "contrib"
-projects[modalframe_cck_editor][subdir] = "contrib"
-projects[modalframe_contrib][subdir] = "contrib"
+; projects[modalframe][subdir] = "contrib"
+; projects[modalframe_cck_editor][subdir] = "contrib"
+; projects[modalframe_contrib][subdir] = "contrib"
 
 projects[nice_menus][type] = "module"
 projects[nice_menus][download][type] = "cvs"
@@ -93,7 +93,7 @@ projects[nice_menus][download][revision] = "HEAD"
 projects[nice_menus][subdir] = "contrib"
 
 projects[onbeforeunload][subdir] = "contrib"
-projects[panels][subdir] = "contrib"
+; projects[panels][subdir] = "contrib"
 projects[pathauto][subdir] = "contrib"
 projects[path_redirect][subdir] = "contrib"
 projects[print][subdir] = "contrib"
@@ -108,17 +108,11 @@ projects[sitedoc][subdir] = "contrib"
 ; projects[spaces][subdir] = "contrib"
 
 projects[spaces][subdir] = "contrib"
-projects[spaces][version] = 3.0-beta1
+projects[spaces][version] = 3.0-beta2
 
 ; projects[spamspan][subdir] = "contrib"
 
 projects[strongarm][subdir] = "contrib"
-
-; projects[strongarm][type] = "module"
-; projects[strongarm][download][type] = "cvs"
-; projects[strongarm][download][module] = "contributions/modules/strongarm"
-; projects[strongarm][download][revision] = "DRUPAL-6--2"
-; projects[strongarm][subdir] = "contrib"
 
 projects[themekey][subdir] = "contrib"
 projects[token][subdir] = "contrib"
