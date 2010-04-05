@@ -60,7 +60,7 @@ function droplitinstallprofile_profile_modules() {
     'ctools', 'page_manager',
 
     // Others
-    'devel', 'diff', 'jquery_update', 'print', 'print_mail', 'vertical_tabs',
+    'devel', 'jquery_update', 'print', 'print_mail', 'vertical_tabs',
 
     // Spaces design customizer
     // 'color', 'spaces_design',
