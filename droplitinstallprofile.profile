@@ -84,11 +84,14 @@ function droplitinstallprofile_profile_task_list() {
  * Implementation of hook_profile_tasks().
  */
 function droplitinstallprofile_profile_tasks(&$task, $url) {
-  install_include(array_merge(droplitinstallprofile_profile_modules()));
+  global $install_locale;
   _droplitinstallprofile_modify_settings();
   _droplitinstallprofile_modify_blocks();
   _droplitinstallprofile_set_content_types();
   _droplitinstallprofile_set_permissions();
+  
+  // Just in case some of the future tasks adds some output
+  $output = '';
 
   if ($task == 'profile') {
     $batch = array(
