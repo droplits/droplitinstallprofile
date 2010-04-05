@@ -1,5 +1,5 @@
 <?php
-// $Id$
+// $Id: droplitinstallprofile.profile,v 1.1.8 2010/04/05 03:11:46 droplits Exp $
 
 /**
  * Implementation of hook_profile_details().
