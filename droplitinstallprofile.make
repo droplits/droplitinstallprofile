@@ -97,9 +97,8 @@ projects[views_slideshow][subdir] = "contrib"
 ; Explicit versions specified to ensure patches apply cleanly.
 
 ; Custom modules
-; projects[seed][subdir] = "custom"
-; projects[seed][location] = "http://code.developmentseed.org/fserver"
-; projects[] = "designkit"
+projects[seed][subdir] = "custom"
+projects[seed][location] = "http://code.developmentseed.org/fserver"
 
 ; Features
 
