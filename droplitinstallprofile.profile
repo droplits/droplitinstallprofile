@@ -48,7 +48,7 @@ function droplitinstallprofile_profile_modules() {
     'transliteration',
 
     // PURL
-    'purl',
+    // 'purl',
 
     // Strongarm
     'strongarm',
@@ -61,10 +61,6 @@ function droplitinstallprofile_profile_modules() {
 
     // Others
     'devel', 'jquery_update', 'print', 'print_mail', 'vertical_tabs',
-
-    // Spaces design customizer
-    // 'color', 'spaces_design',
-    // 'spaces', 'spaces_dashboard', 'spaces_ui', 'spaces_user',
 
   );
 
@@ -112,30 +108,35 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
     // Create the admin role.
     db_query("INSERT INTO {role} (name) VALUES ('%s')", 'admin');
     db_query("INSERT INTO {users_roles} VALUES (1, 3)");
-    
+
+    // Create the editor role.
+    db_query("INSERT INTO {role} (name) VALUES ('%s')", 'editor');
+
     // Other variables worth setting.
 
     variable_set('site_footer', '<a href="http://droplits.com">Droplits: We Build Web Tools</a>');
 
-    // Clear caches.
+    // Rebuild key tables/caches
     drupal_flush_all_caches();
 
-    // Enable the right theme. This must be handled after drupal_flush_all_caches()
-    // which rebuilds the system table based on a stale static cache,
-    // blowing away our changes.
+  // Set default theme. This must happen after drupal_flush_all_caches(), which
+  // will run system_theme_data() without detecting themes in the install
+  // profile directory.
     _droplitinstallprofile_system_theme_data();
     db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
-    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitimce'");
-    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'droplitcube'");
-    db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'rubik'");
+    db_query("UPDATE {system} SET status = 0 WHERE type = 'theme' and name ='%s'", 'droplitimce');
+    db_query("UPDATE {system} SET status = 0 WHERE type = 'theme' and name ='%s'", 'droplit');
+    db_query("UPDATE {system} SET status = 0 WHERE type = 'theme' and name ='%s'", 'rubik');
+    db_query("UPDATE {system} SET status = 0 WHERE type = 'theme' and name ='%s'", 'tao');
+    db_query("UPDATE {blocks} SET status = 0, region = ''"); // disable all DB blocks
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitimce'");
-    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplitcube'");
+    db_query("UPDATE {blocks} SET region = '' WHERE theme = 'droplit'");
     db_query("UPDATE {blocks} SET region = '' WHERE theme = 'rubik'");
-    variable_set('theme_default', 'droplitcube');
+    variable_set('theme_default', 'droplit');
     variable_set('admin_theme', 'rubik');
 
     system_initialize_theme_blocks('droplitimce');
-    system_initialize_theme_blocks('droplitcube');
+    system_initialize_theme_blocks('droplit');
     system_initialize_theme_blocks('rubik');
   
   // Theme settings.
@@ -143,6 +144,11 @@ function droplitinstallprofile_profile_tasks(&$task, $url) {
   $theme_settings['toggle_node_info_page'] = FALSE;
   variable_set('theme_settings', $theme_settings);
 
+  // In Aegir install processes, we need to init strongarm manually as a
+  // separate page load isn't available to do this for us.
+  if (function_exists('strongarm_init')) {
+    strongarm_init();
+  }
 
     $task = 'finished';
   }  
@@ -156,8 +162,8 @@ function _droplitinstallprofile_modify_settings() {
   global $theme_key;
 
   // Basic Drupal settings.
-  // variable_set('site_frontpage', 'home');
-  // variable_set('user_register', 0);
+  variable_set('site_frontpage', 'front');
+  variable_set('user_register', 0);
 
 } // function _droplitinstallprofile_modify_settings
 
@@ -198,20 +204,20 @@ function _droplitinstallprofile_set_permissions() {
  * Modify the block settings.
  */
 function _droplitinstallprofile_modify_blocks() {
-  _block_rehash();  // Fill the DB with default block info for droplitcube.
+  _block_rehash();  // Fill the DB with default block info for droplit.
 
   // Hide "Powered by Drupal".
   db_query("DELETE FROM {blocks} WHERE module = '%s' AND theme = '%s' " .
-           "AND region = '%s'", 'system', 'droplitcube', 'content');
+           "AND region = '%s'", 'system', 'droplit', 'content');
 
   // Hide "Navigation".
   db_query("DELETE FROM {blocks} WHERE module = '%s' AND theme = '%s' " .
-           "AND region = '%s'", 'user', 'droplitcube', 'content');  
+           "AND region = '%s'", 'user', 'droplit', 'content');  
   
   // Hide "User login".
   db_query("UPDATE {blocks} SET status = %d, region = '%s' " .
            "WHERE theme = '%s' AND bid = %d AND module = '%s'",
-           0, NULL, 'droplitcube', 5, 'user');
+           0, NULL, 'droplit', 5, 'user');
 } // function _droplitinstallprofile_modify_blocks
 
 /**
