@@ -62,13 +62,13 @@ projects[views_slideshow][subdir] = "contrib"
 projects[ckeditor][subdir] = "contrib"
 projects[ckeditor][type] = "module"
 projects[ckeditor][version] = 1.x-dev
-projects[ckeditor][patch][] = "http://drupal.org/files/issues/fix_br.patch"
+; projects[ckeditor][patch][] = "http://drupal.org/files/issues/fix_br.patch"
 
 projects[date][subdir] = "contrib"
 projects[date][type] = "module"
 projects[date][version] = 2.x-dev
-projects[date][patch][] = "http://drupal.org/files/issues/518816-5.date_format_date_warnings.patch"
-projects[date][patch][] = "http://drupal.org/files/issues/date-772180-element-description-1.patch"
+; projects[date][patch][] = "http://drupal.org/files/issues/518816-5.date_format_date_warnings.patch"
+; projects[date][patch][] = "http://drupal.org/files/issues/date-772180-element-description-1.patch"
 
 ; Custom modules
 ; Seed has been deprecated by developmentseed. I still want to use it as an example of a custom module
